@@ -85,18 +85,6 @@ error; `peek::set_sink(callable)` replaces it, and `peek::reset_sink()` restores
 it. The callable receives one complete record. An empty sink discards output,
 and recursive writes from inside a sink are suppressed.
 
-## CFX
-
-In a [`cfx`](https://github.com/njlane314/cfx) solution archive, add `peek`
-directly as a submodule:
-
-```sh
-git submodule add https://github.com/njlane314/peek include/peek
-```
-
-`cfx` makes that root available as `<peek.hpp>`, enables diagnostics for local
-builds, and disables them in the exact source prepared for submission.
-
 ## LIMITS
 
 - Expression-name recovery is best-effort because macros cannot parse C++.
